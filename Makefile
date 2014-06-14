@@ -6,7 +6,7 @@ UTILS_PATH = images/utils
 
 util_build = docker build -t $(NAME)/$(1):$(BASE_VERSION) --rm $(UTILS_PATH)/$(1)
 util_tag_latest = docker tag $(NAME)/$(1):$(BASE_VERSION) $(NAME)/$(1):latest 
-util_release = @if ! docker images $(NAME)/($1) | awk '{ print $$2 }' | grep -q -F $(BASE_VERSION); then echo "$(NAME)/$(1) version $(BASE_VERSION) is not yet built. Please run 'make build_$(1)'"; false; fi && docker push $(NAME)/$(1)	
+util_release = @if ! docker images $(NAME)/$1 | awk '{ print $$2 }' | grep -q -F $(BASE_VERSION); then echo "$(NAME)/$(1) version $(BASE_VERSION) is not yet built. Please run 'make build_$(1)'"; false; fi && docker push $(NAME)/$(1)	
 
 all: build_all
 
@@ -29,8 +29,7 @@ build_wpscan:
 	docker build -t $(NAME)/wpscan:$(BASE_VERSION) --rm $(UTILS_PATH)/wpscan
 
 release_wpscan: tag_latest_wpscan
-	@if ! docker images $(NAME)/wpscan | awk '{ print $$2 }' | grep -q -F $(BASE_VERSION); then echo "$(NAME)/wpscan version $(BASE_VERSION) is not yet built. Please run 'make build_wpscan'"; false; fi
-	docker push $(NAME)/wpscan		
+	$(call util_release,wpscan)		
 
 tag_latest_wpscan:
 	docker tag $(NAME)/wpscan:$(BASE_VERSION) $(NAME)/wpscan:latest
