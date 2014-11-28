@@ -6,9 +6,7 @@ set -x
 # this script only for base image
 
 apt-get update
+/build/utilities.sh
+$minimal_apt_get_install git
 
-$minimal_apt_get_install curl ca-certificates
-
-# create app user
-/build/prepare.sh
 /build/finalize.sh

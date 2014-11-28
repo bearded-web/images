@@ -1,9 +1,7 @@
-FROM m0sth8/base
+FROM m0sth8/base:latest
 
-USER root
-WORKDIR /root
 ADD . /nmap
 
-RUN /nmap/nmap.sh
+RUN /nmap/install.sh && rm -rf /nmap
 
 ENTRYPOINT ["nmap"]

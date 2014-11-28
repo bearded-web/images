@@ -4,4 +4,4 @@ source /build/buildconfig
 set -x
 
 ## Install Python.
-apt-get install -y python3
+$minimal_apt_get_install python3

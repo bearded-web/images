@@ -10,7 +10,7 @@ $minimal_apt_get_install libxml2-dev libxslt1-dev
 ## For ssl
 $minimal_apt_get_install libssl-dev
 ## For rmagick and minimagick.
-# $minimal_apt_get_install imagemagick libmagickwand-dev
+$minimal_apt_get_install imagemagick libmagickwand-dev
 ## For sqlite3.
 $minimal_apt_get_install libsqlite3-dev
 ## For curb.

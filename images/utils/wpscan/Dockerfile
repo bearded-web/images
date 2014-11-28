@@ -1,17 +1,17 @@
-FROM m0sth8/base
+FROM m0sth8/ruby
 
-USER root
-RUN ruby-switch --set ruby2.1
+
+ADD . /wpscan
+
+RUN /wpscan/install.sh && rm -rf /wpscan
 
 USER app
-WORKDIR /home/app
 
-RUN git clone https://github.com/wpscanteam/wpscan.git
+RUN cd ~ && git clone https://github.com/wpscanteam/wpscan.git wpscan \
+	 && cd ./wpscan \
+	 && bundle install --path ~/.gem --without test development 
 
 WORKDIR /home/app/wpscan
-
-RUN bundle install --path ~/.gem --without test development
-
 RUN chmod +x ./wpscan.rb
 
 ENTRYPOINT ["./wpscan.rb"]
