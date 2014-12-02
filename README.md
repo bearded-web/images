@@ -23,7 +23,9 @@ Build utils or platform, mark version as latest ans push to registry
  * golang - this one with go compiler and runtime
  * python - python 2.7 and python 3 
  * ruby - ruby 2.1 installed and also available for installation /build/ruby1.8.sh,ruby1.9.sh,ruby2.0.sh and ruby-switch.
+ * nodejs - nodejs version v0.10.33 installed from chris-lea ppa
  * phantomjs - phantomjs without nodejs.
+
 
 #### Available utils
 
@@ -32,7 +34,6 @@ Build utils or platform, mark version as latest ans push to registry
  * wpscan - Scanner for wordpress wpscan.org
  * wappalyzer - Wappalyzer with phantomjs support https://github.com/SLonoed/phantalyzer 
  * wweb - Website Fingerprinter https://github.com/urbanadventurer/WhatWeb
- * 
  
 #### Examples
 
