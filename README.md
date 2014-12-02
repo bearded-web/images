@@ -25,8 +25,7 @@ Build utils or platform, mark version as latest ans push to registry
  * ruby - ruby 2.1 installed and also available for installation /build/ruby1.8.sh,ruby1.9.sh,ruby2.0.sh and ruby-switch.
  * phantomjs - phantomjs without nodejs.
 
-Available utils
-===============
+#### Available utils
 
  * nmap - Utility for network discovery and security auditing http://nmap.org/
  * w3af - Web Application Attack and Audit Framework http://w3af.org
