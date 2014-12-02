@@ -1,5 +1,5 @@
-Images
-======
+## Images
+
 
 Docker images for security audit
 
@@ -7,8 +7,8 @@ Base image is based on ubuntu:14.04
 
 All builded images are available in docker registry http://registry.hub.docker.com/u/m0sth8
 
-Make commands
-=============
+#### Make commands
+
 
 Build base image, mark version as latest and push to registry
 
@@ -18,8 +18,7 @@ Build utils or platform, mark version as latest ans push to registry
 
 `make target=NAME build tag_latest release` 
 
-Available platforms
-===================
+#### Available platforms
 
  * golang - this one with go compiler and runtime
  * python - python 2.7 and python 3 
@@ -36,8 +35,7 @@ Available utils
  * wweb - Website Fingerprinter https://github.com/urbanadventurer/WhatWeb
  * 
  
-Examples
-========
+#### Examples
 
 Scan host with nmap
 
