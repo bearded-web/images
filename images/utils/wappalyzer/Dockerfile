@@ -4,7 +4,7 @@ USER app
 RUN mkdir ~/scripts
 WORKDIR /home/app/scripts
 
-ENV VERSION 0.0.1
+ENV VERSION 0.0.2
 
 RUN curl -sSL https://github.com/ElbertF/Wappalyzer/archive/master.tar.gz | tar xz \
 	&& mkdir wappalyzer \ 
