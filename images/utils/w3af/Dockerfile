@@ -1,4 +1,4 @@
-FROM m0sth8/python
+FROM barbudo/python
 
 ADD . /w3af
 RUN /w3af/install.sh && rm -rf /w3af

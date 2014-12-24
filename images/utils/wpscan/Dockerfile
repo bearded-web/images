@@ -1,5 +1,6 @@
-FROM m0sth8/ruby
+FROM barbudo/ruby
 
+ENV WPSCAN_VERSION a8c55dd
 
 ADD . /wpscan
 

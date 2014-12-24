@@ -1,4 +1,4 @@
-FROM m0sth8/ruby
+FROM barbudo/ruby
 
 
 ADD . /wweb
