@@ -45,4 +45,3 @@ Analyze technologies and web frameworks
 
 `docker run --rm -t -i m0sth8/wappalyzer https://github.com`
 
-`docker run --rm -t -i m0sth8/wweb https://github.com`
